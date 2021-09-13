@@ -1,0 +1,158 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  box-sizing: border-box;
+}
+input {
+  height: 30px;
+  padding-left: 20px;
+  font-size: 20px;
+}
+::placeholder{
+  font-size:20px;
+  line-height: 20px;  transition: line-height 0.5s ease;
+  }
+
+.button-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
+}
+.popup_btn{
+  font-size: 16px;
+  width: 235px;
+  height: 70px;
+  background-color: #ff0000;
+  color: #fff;
+  border-radius:4px;
+}
+
+.form-popup-bg {
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+.form-popup-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  /*background-color: rgba(94, 110, 141, 0.9);*/
+  background-color: black;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  overflow-y: auto;
+  z-index: 10000;
+}
+.form-popup-bg.is-visible {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity 0.3s 0s, visibility 0s 0s;
+  -moz-transition: opacity 0.3s 0s, visibility 0s 0s;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+.form-container {
+  height: 559px;
+  width: 909px;
+  background-image: url(../img/form2.png);
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+#formSend {
+  margin-left: 60%;
+  margin-top: 30%;
+  font-size: 12px;
+}
+/*.close-button {*/
+/*  background:none;*/
+/*  color: #ff0000;*/
+/*  width: 40px;*/
+/*  height: 40px;*/
+/*  position: absolute;*/
+/*  top: 20px;*/
+/*  right: 20px;*/
+
+/*}*/
+#SendBtn{
+  background-color: #fff;
+  margin-top: 0px;
+  border: none;
+  background-size: contain;
+  background-image: url(../img/knopka.png);
+  width: 277px;
+  height: 80px;
+  cursor: pointer;
+}
+.form-control{
+  width:247px;
+  margin:5px 0 10px 0;
+}
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: #ff0000;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.form-popup-bg:before{
+  content:'';
+  background-color: #fff;
+  opacity: .25;
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+label {
+  display:block;
+  position:relative;
+  padding-left:120px; /* adjust if necessary */
+}
+label > span {
+  font-weight: 600;
+  position:absolute;
+  left:0;
+}

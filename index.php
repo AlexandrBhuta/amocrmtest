@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/sass/style.css" class="css"><link href="src/sass/style.css" rel="stylesheet">
+    <script src="src/js/amo_popup.js"></script>
+    <title>Form for AmoCRM</title>
+</head>
+<body>
+<div class="button-wrapper">
+    <button class="popup_btn" id="btnOpenForm">Кликни</button>
+</div>
+<div class="form-popup-bg">
+    <div class="form-container">
+        <a href="#" id="btnCloseForm" class="close-button close"></a>
+        <form action="send.php" method="POST" id="formSend">
+            <div class="form-group">
+                <input type="hidden" name="action" value="form">
+                <label for=""><span>Введите Email для получения файлов:</span></label><br>
+                <input type="email" name="Email"  class="form-control" placeholder="E-mail" data-mask="___@___.___" />
+            </div>
+            <div class="form-group">
+                <label for=""><span>Введите телефон для подтверждения доступа:</span></label><br>
+                <input class="form-control" type="tel" name="tel1" placeholder="+7 (000) 000-00-00" data-mask="+7 (___) ___-__-__" /><br>
+            </div>
+<!--            <button id="SendBtn" type="submit"></button>-->
+            <button id="SendBtn" type="submit" name="submit" value="Submit"></button>
+
+        </form>
+        <p id="my-form-status"></p>
+    </div>
+</div>
+</body>
+</html>
